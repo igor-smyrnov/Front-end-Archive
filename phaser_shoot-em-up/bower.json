@@ -1,0 +1,21 @@
+{
+  "name": "js-phaser-shoot_em-up",
+  "authors": [
+    "Igor Smyrnov <smyrnovai@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "igorsmyrnov.pl",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "phaser": "^2.6.2"
+  }
+}

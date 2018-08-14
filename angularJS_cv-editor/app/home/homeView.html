@@ -1,0 +1,93 @@
+<div>
+    <div class="wraper container">
+        <header class="row">
+            <div class="col-md-2 col-sm-12">
+                <img src="styles/img/headshot.jpg" alt="Igor Smyrnov">
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <h1>
+                    <span editable-text="personal.personalData.name">
+                        {{personal.personalData.name}}
+                    </span>
+
+                    <span editable-text="personal.personalData.surname">
+                        {{personal.personalData.surname}}
+                    </span>
+                </h1>
+                <h2 editable-text="personal.personalData.position">
+                    {{personal.personalData.position}}
+                </h2>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <ul>
+                    <li>Email:
+                        <a editable-text="personal.personalData.email" href="mailto:{{personal.personalData.email}}">
+                            {{personal.personalData.email}}
+                        </a>
+                    </li>
+                    <li>Telefon:
+                        <span editable-text="personal.personalData.phonenumber">
+                            {{personal.personalData.phonenumber}}
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <section ng-repeat="section in sections" class="row">
+                <div class="col-md-3">
+                    <h1>{{section.name}}:</h1>
+                </div>
+                <div class="col-md-9">
+                    <article ng-repeat="records in section.records" ng-if="section.type==1">
+                        <div ng-repeat="fields in records.fields">
+                            <span class="cat-{{fields.type}}">
+                                {{fields.value}}
+                            </span>
+                        </div>
+                    </article>
+
+                    <article ng-if="section.type==2">
+                         <span ng-repeat="records in section.records">
+                             <span class="skill" ng-repeat="fields in records.fields">
+                                 {{fields.value}}
+                             </span>
+                         </span>
+                    </article>
+
+                    <article ng-if="section.type==3">
+                        <p ng-repeat="fields in section.records[0].fields">
+                            {{fields.value}}
+                        </p>
+                    </article>
+                    <form>
+                        <span ng-repeat="fields in arrfields">
+                           <span ng-repeat="field in fields[section.id]">
+                               {{field.key}}<input type="{{field.type}}" ng-model="field.value">
+                           </span>
+                        </span>
+                    </form>
+
+                    <form>
+                        <input type="text" ng-model="newRecord[section.id].type">
+                        <input type="text" ng-model="newRecord[section.id].key">
+                        <button type="submit" class="btn btn-primary" ng-click="addRecord(section.id)">Add record</button>
+                    </form>
+                </div>
+            </section>
+            <section>
+                <form>
+                    <input ng-model="newCat.name" type="text" placeholder="title"/>
+                    <button class="btn btn-primary" ng-click="addCategory()">Add section</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>Wyrazam zgode na przetwarzanie moich danych osobowych w celach rekrutacji, zgodnie z Ustawa z dn. 29 sierpnia
+                1997 r. o ochronie danych osobowych (Dz. U. z 2002 r. Nr 101, poz. 926 z pozniejszymi zmianami).</p>
+        </footer>
+
+        <div ng-if="addCategory!==undefined" class="panel">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+{
+  "name": "simple-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://IgorSmyrnov@bitbucket.org/IgorSmyrnov/simple-calculator.git"
+  },
+  "author": "Igor Smyrnov",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/IgorSmyrnov/simple-calculator#readme",
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}

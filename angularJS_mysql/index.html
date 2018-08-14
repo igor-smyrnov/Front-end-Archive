@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular+MySQL</title>
+        <!-- Angular.js -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+   
+    <form action="">
+        Header: <input type="text" ng-model="title"><br>
+        Content: <input type="text" ng-model="content"><br>
+        Author: <input type="text" ng-model="author"><br>
+        <input type="button" value="submit" ng-click="insertData()"><br>
+    </form>
+    
+    <!-- app.js -->
+    <script>
+        var myApp = angular.module("myApp",[]);
+        myApp.controller("myCtrl", function($scope, $http){
+            $scope.insertData = function(){
+                $http.post(
+                    "insert.php", {
+                        'title':$scope.title,
+                        'content':$scope.content,
+                        'author':$scope.author
+                    }
+                ).success(function(data, status, header, config){
+                    console.log("data inserted successfully");
+                    console.log("title: "+$scope.title);
+                    console.log("content: "+$scope.content);
+                    console.log("author: "+$scope.author);
+                });
+            }
+        });    
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<header>
+    <nav class="page-header">
+        <div class="container">
+            <ul class="nav nav-pills">
+                <li ui-sref-active="active">
+                    <a ui-sref="sampleBuild"
+                       title="Go to sample build page">
+                        Sample build
+                    </a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="builds"
+                       title="Go to build history page">
+                        Build history
+                    </a>
+                </li>
+            </ul>
+            <div class="text-center">
+                <h3>Project:
+                    <a ng-href="{{githubProfile.html_url}}"
+                       title="View on GitHub (Open in new window)"
+                       target="_blank"
+                       rel="noopener">
+                        {{travisRepo.slug}}
+                    </a>
+                </h3>
+                <p>
+                    <b>Description:</b>
+                    {{travisRepo.description}}
+                </p>
+            </div>
+        </div>
+    </nav>
+</header>

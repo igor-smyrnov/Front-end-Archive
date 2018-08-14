@@ -1,0 +1,30 @@
+<div class="col-md-12 jumbotron">
+    <img ng-src="{{orgData.avatar_url}}" height="100" alt="">
+    <h1>{{orgData.login}}</h1>
+</div>
+<div class="col-md-9">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Organization repositories</div>
+        <table class="table table-striped table-hover">
+            <tr ng-repeat="repo in reposData">
+                <td><a ng-href="#/repo/{{repo.full_name}}">{{repo.name}}</a></td>
+                <td>{{repo.description}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="col-md-3">
+    <div ng-if="usersData.length" class="list-group">
+        <a ng-href="#/orgs/{{orgData.login}}/members" class="list-group-item">
+            <h4>People</h4>
+        </a>
+        <a ng-repeat="user in usersData" ng-href="#/user/{{user.login}}" class="list-group-item">
+            <img ng-src="{{user.avatar_url}}" class="img-rounded" height="42" alt="">
+            <strong>{{user.login}}</strong>
+            <i>{{user.name}}</i>
+        </a>
+    </div>
+</div>
+<!--<pre>{{orgData | json}}</pre>
+<pre>{{reposData | json}}</pre>-->
+<pre>{{usersData | json}}</pre>

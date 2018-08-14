@@ -1,0 +1,48 @@
+<main ng-controller="mainCtrl">
+    <button ng-click="readPosts()">Get Posts</button>
+    <section ng-if="data">
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Author</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="post in data track by $index">
+                <td>{{post.title}}</td>
+                <td>{{post.content}}</td>
+                <td>{{post.author}}</td>
+                <td><button ng-click="removePost($index)">Remove item</button></td>
+                <td><button ng-click="createUpdateForm($index)">Change item</button></td>
+            </tr>
+        </table>
+
+        <button ng-click="createAddForm()">Add post</button>
+
+        <form ng-if="newPost" ng-submit="addPost(newPost)">
+            <input type="text" placeholder="Title" ng-model="newPost.title">
+            <input type="text" placeholder="Content" ng-model="newPost.content">
+            <input type="text" placeholder="Author" ng-model="newPost.author">
+
+            <button type="submit">add</button>
+            <button type="button" ng-click="clearForm(newPost)">clear</button>
+
+            <pre>{{newPost | json}}</pre>
+        </form>
+
+        <form ng-if="changePost" ng-submit="updatePost(changePost)">
+            <input type="text" placeholder="Title" ng-model="changePost.title">
+            <input type="text" placeholder="Content" ng-model="changePost.content">
+            <input type="text" placeholder="Author" ng-model="changePost.author">
+
+            <button type="submit">change</button>
+            <button type="button" ng-click="clearForm(changePost)">clear</button>
+
+            <pre>{{changePost | json}}</pre>
+        </form>
+
+        <pre>{{data | json}}</pre>
+    </section>
+
+</main>

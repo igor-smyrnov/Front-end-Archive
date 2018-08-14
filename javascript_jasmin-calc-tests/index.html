@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/jasmine.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/jasmine.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/jasmine-html.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/boot.min.js"></script>
+
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div id="calculator" class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="input-group input-group-lg">
+                <input type="text" class="screen form-control">
+                <div class="input-group-btn">
+                    <span class="btn btn-default">=</span>
+                </div>
+            </div>
+            <div class="btn-group btn-group-lg">
+                <span class="clear btn btn-lg btn-danger">C</span>
+                <span class="backspace btn btn-lg btn-success">Backspace</span>
+            </div>
+
+            <div class="errors"></div>
+        </div>
+        <div class="panel-body">
+            <div class="keys row">
+                <div class="col-lg-8">
+                    <div class="btn-toolbar">
+                        <div class="btn-group btn-group-lg">
+                            <span class="btn btn-default">7</span>
+                            <span class="btn btn-default">8</span>
+                            <span class="btn btn-default">9</span>
+                        </div>
+                    </div>
+                    <div class="btn-toolbar">
+                        <div class="btn-group btn-group-lg">
+                            <span class="btn btn-default">4</span>
+                            <span class="btn btn-default">5</span>
+                            <span class="btn btn-default">6</span>
+                        </div>
+                    </div>
+                    <div class="btn-toolbar">
+                        <div class="btn-group btn-group-lg">
+                            <span class="btn btn-default">1</span>
+                            <span class="btn btn-default">2</span>
+                            <span class="btn btn-default">3</span>
+                        </div>
+                    </div>
+                    <div class="btn-toolbar">
+                        <div class="btn-group btn-group-lg">
+                            <span class="btn btn-default">0</span>
+                            <span class="btn btn-default">+</span>
+                            <span class="btn btn-default">-</span>
+                            <span class="btn btn-default">*</span>
+                            <span class="btn btn-default">/</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./script.js"></script>
+<script src="./script.spec.js"></script>
+<script>
+
+    describe('calculator - ', function () {
+
+        var screen;
+        var equalBtn;
+
+        beforeEach(function(){
+            screen = document.querySelector("#calculator .screen");
+            equalBtn = document.querySelector("#calculator .equal");
+        });
+        describe('calculations:', function () {
+            it('1 + 1 should equal 2', function () {
+                screen.value = '1 + 1';
+                equalBtn.click();
+                expect(screen.value).toEqual('2');
+            });
+
+            it('1 - 1 should equal 0', function () {
+                screen.value = '1 - 1';
+                equalBtn.click();
+                expect(screen.value).toEqual('0');
+            });
+
+            it('1 * 1 should equal 1', function () {
+                screen.value = '1 * 1';
+                equalBtn.click();
+                expect(screen.value).toEqual('1');
+            });
+
+            it('1 / 1 should equal 1', function () {
+                screen.value = '1 / 1';
+                equalBtn.click();
+                expect(screen.value).toEqual('1');
+            });
+            it('result should has 3 demicals', function () {
+                screen.value = "1.9*3.55";
+                equalBtn.click();
+                expect(screen.value).toEqual('6.745');
+            });
+
+        });
+
+        describe('buttons:', function () {
+            it('button "C" should clear the value', function () {
+                var clear = document.querySelector("#calculator .clear");
+                clear.click();
+                expect(screen.value).toEqual('');
+            });
+
+            it('button "Backspace" should remove last symbol', function () {
+                var backspace = document.querySelector("#calculator .backspace");
+                screen.value = "555";
+                backspace.click();
+                expect(screen.value).toEqual('55');
+            });
+        });
+
+        describe('isFloat():', function () {
+            it('should return true', function () {
+                var value = 444.5;
+                expect(value.isFloat()).toEqual(true);
+            });
+
+            it('should return false', function () {
+                var value = 444;
+                expect(value.isFloat()).toEqual(false);
+            });
+        });
+
+        describe('isInt():', function () {
+            it('should return false', function () {
+                var value = 444.5;
+                expect(value.isInt()).toEqual(false);
+            });
+
+            it('should return true', function () {
+                var value = 444;
+                expect(value.isInt()).toEqual(true);
+            });
+        });
+
+/*        describe('hasLetter():', function () {
+            it('should return true', function () {
+                var value = "1.9*3.55";
+                expect(value.hasLetters()).toEqual(true);
+            });
+
+            it('should return false', function () {
+                var value = "1f.9*3.55";
+                expect(value.hasLetters()).toEqual(false);
+            });
+        });*/
+        describe('letters in the string:', function () {
+            it('letter symbol should be removed from string', function () {
+                screen.value = 'f';
+                equalBtn.click();
+                expect(screen.value).toBe('');
+            });
+
+            it('letter symbol should be removed from string', function () {
+                screen.value = 'f44';
+                equalBtn.click();
+                expect(screen.value).toBe('44');
+            });
+        });
+
+        describe('bad expressions in the string:', function () {
+            it('bad expressions should be removed from string', function () {
+                screen.value = '4++4';
+                equalBtn.click();
+                expect(screen.value).toBe('4');
+            });
+
+            it('bad expressions should be removed from string', function () {
+                screen.value = '4+++4';
+                equalBtn.click();
+                expect(screen.value).toBe('4');
+            });
+        });
+
+        describe('0 on start of the string:', function () {
+            it('bad expressions should be removed from string', function () {
+                screen.value = '02';
+                equalBtn.click();
+                expect(screen.value).toBe('2');
+            });
+        });
+
+        describe('not a number symbol on start of the string:', function () {
+            it('"*" at start should be removed from string', function () {
+                screen.value = '*2';
+                equalBtn.click();
+                expect(screen.value).toBe('2');
+            });
+
+            it('"/" at start  should be removed from string', function () {
+                screen.value = '/2';
+                equalBtn.click();
+                expect(screen.value).toBe('2');
+            });
+        });
+
+        describe('dividing by zero in the string checking:', function () {
+            it('bad expressions should be removed from string', function () {
+                screen.value = '2/0';
+                equalBtn.click();
+                expect(screen.value).toBe('');
+            });
+        });
+    });
+</script>
+</body>
+</html>

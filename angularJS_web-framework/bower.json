@@ -1,0 +1,14 @@
+{
+  "name": "angular-cms",
+  "description": "",
+  "version": "0.0.0",
+  "homepage": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "angular-ui-router": "^0.3.1",
+    "ui-router-metatags": "^1.0.3"
+  }
+}

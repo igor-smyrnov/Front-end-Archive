@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dinosaur jQuery</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+    <script>
+        $(function(){
+            $('.canvas').mousemove(function(e){
+                var pos = $(this).offset();
+                
+                $(".ray").css('top', e.pageY-140);
+                $(".ray").css('left', e.pageX-140);
+                
+                var Xinner=((e.pageX - pos.left)*(-1))+160;
+                var Yinner=((e.pageY - pos.top)*(-1))+160;
+                
+                $(".ray").css('background-position', Xinner+'px '+Yinner+'px');
+                
+                console.log("X: " + Xinner + " Y: " + Yinner);
+            });
+            
+            $('.dino').on('mouseenter', function(){
+                $('<div class="ray"></div>').appendTo('.canvas').fadeIn("slow").hide().fadeIn("fast");
+            });
+            $('.dino').on('mouseleave', function(){
+                $('.ray').fadeOut("fast", function(){
+                    $(this).remove();
+                });
+            });
+        });
+    </script>
+    <style>
+        body{
+            margin: 0px;
+            padding: 20px;
+        }
+        .dino{
+            left: 12px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+        .ray{
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            background: url("dino-skeleton.png") no-repeat;
+            
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+            
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+        <img src="dino.png" class="dino">
+    </div>
+</body>
+</html>

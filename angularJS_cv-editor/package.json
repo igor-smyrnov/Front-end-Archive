@@ -1,0 +1,27 @@
+{
+  "name": "cv-editor",
+  "version": "1.0.0",
+  "description": "Simple AngularJS project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igor-smyrnov/cv-editor.git"
+  },
+  "author": "igor-smyrnov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igor-smyrnov/cv-editor/issues"
+  },
+  "homepage": "https://github.com/igor-smyrnov/cv-editor#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.0.0",
+    "gulp-jasmine": "^2.3.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-jasmine": "^1.0.2"
+  }
+}

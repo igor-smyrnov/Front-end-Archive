@@ -1,0 +1,43 @@
+* {
+    transition: .3s;
+}
+
+.sort-icon {
+    font-size: 9px;
+    margin-left: 5px;
+}
+
+th {
+    cursor:pointer;
+}
+
+.page-header {
+    margin-top: 10px;
+}
+
+.label.push {
+    background-color: #5bc0de;
+}
+
+.label.pull_request {
+    background-color: #f0ad4e;
+}
+
+.error {
+    padding-top: 75px;
+}
+
+.error .icon-404 {
+    background: url(/../assets/img/errors.png) no-repeat;
+    background-size: 200px 1000px;
+    display: block;
+    margin: 0 auto 50px;
+    height: 130px;
+    width: 200px;
+    background-position: 0 -414px;
+}
+
+.table th,
+.table td {
+    text-align: center;
+}

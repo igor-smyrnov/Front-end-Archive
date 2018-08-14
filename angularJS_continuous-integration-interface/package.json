@@ -1,0 +1,35 @@
+{
+  "name": "ci_interface",
+  "version": "1.0.0",
+  "description": "test continuous integration interface",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "bower install && gulp index",
+    "prestart": "npm install",
+    "start": "node server.js",
+    "pretest": "npm install",
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://IgorSmyrnov@bitbucket.org/IgorSmyrnov/ci_interface.git"
+  },
+  "author": "Igor Smyrnov",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/IgorSmyrnov/ci_interface#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-jasmine": "^2.4.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.1.2",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-ng-html2js-preprocessor": "^1.0.0"
+  }
+}

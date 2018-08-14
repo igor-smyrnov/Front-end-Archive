@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <title>Character creator</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/all.css">
+    
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/my.js"></script>
+
+</head>
+<body>
+   
+    <div class="navbar navbar-default">
+        <div class="container"> 
+            <h2>Create your character!</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row-fluid">
+            <div class="name form-group col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Generate</button>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Name">
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+            <div class="surname form-group col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Generate</button>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Surname">
+                </div><!-- /input-group -->
+            </div><!-- /.row -->
+        </div>
+        
+        <div class="row-fluid">
+            <div class="form-group col-lg-3">
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="male btn btn-default">
+                        <span class="glyphicon glyphicon-king" aria-hidden="true"></span> Male
+                    </button>
+                    <button type="button" class="female btn btn-default"> 
+                        <span class="glyphicon glyphicon-queen" aria-hidden="true"></span> Female          
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="form-group col-lg-3">
+                <button type="button" class="submit btn btn-default">Submit</button>
+            </div>
+            <ol class="summary alert alert-info col-lg-3">
+                <li class="s-name">Name: <span></span></li>
+                <li class="s-surname">Surname: <span></span></li>
+                <li class="s-gender">Gender: <span></span></li>
+            </ol>
+        </div> 
+    </div>
+</body>
+</html>

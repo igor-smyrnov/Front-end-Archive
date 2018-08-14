@@ -1,0 +1,19 @@
+.male .glyphicon, .female .glyphicon {
+  padding: 10px;
+  border-radius: 90%;
+  border: 1px solid #000;
+  font-size: 25px;
+  transition: all 0.6s ease;
+  transform-style: preserve-3d;
+  color: #526f9b;
+}
+
+.female .glyphicon {
+  color: 216.16438deg;
+}
+
+.male .glyphicon:hover, .female .glyphicon:hover {
+  transform: rotateY(180deg);
+}
+
+/*# sourceMappingURL=my_style.css.map */

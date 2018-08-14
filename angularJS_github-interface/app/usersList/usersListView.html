@@ -1,0 +1,26 @@
+<h1>Users list</h1>
+<h4>{{noUsers}}</h4>
+<table ng-if="usersData.length"
+       class="panel panel-primary table table-striped table-hover">
+    <thead class="panel-heading">
+    <tr>
+        <th></th>
+        <th>User name</th>
+        <th>Full name</th>
+        <th>Location</th>
+        <th>Public repositories</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in usersData">
+            <td><img ng-src="{{user.avatar_url}}" class="img-rounded" height="50px" alt=""></td>
+            <td><a ng-href="#/user/{{user.login}}">{{user.login}}</a></td>
+            <td>{{user.name}}</td>
+            <td>{{user.location}}</td>
+            <td>{{user.public_repos}}</td>
+            <td><a ng-href="#/users/{{user.login}}/repos">View repositories</a></td>
+        </tr>
+    </tbody>
+</table>
+<pre>{{usersData | json}}</pre>

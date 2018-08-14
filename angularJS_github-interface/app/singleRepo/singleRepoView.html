@@ -1,0 +1,76 @@
+<div class="jumbotron">
+    <h3>
+        <span class="glyphicon glyphicon-book"></span>
+        <a ng-href="#/user/{{repoData.owner.login}}">{{repoData.owner.login}}</a> /
+        <a ng-href="#/repo/{{repoData.owner.login}}/{{repoData.name}}" >{{repoData.name}}</a>
+    </h3>
+    <div class="pull-right">
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-primary">
+                <span class="glyphicon glyphicon-eye-open"></span>
+                Watch
+            </button>
+            <button class="btn btn-default">
+                <span class="badge">{{repoData.subscribers_count}}</span>
+            </button>
+        </div>
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-primary">
+                <span class="glyphicon glyphicon-star"></span>
+                Star
+            </button>
+            <button class="btn btn-default">
+                <span class="badge">{{repoData.stargazers_count}}</span>
+            </button>
+        </div>
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-primary">
+                <span class="glyphicon glyphicon-pencil"></span>
+                Fork
+            </button>
+            <button class="btn btn-default">
+                <span class="badge">{{repoData.forks_count}}</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<p>{{repoData.description}}</p>
+<p><a ng-href="{{repoData.homepage}}">{{repoData.homepage}}</a></p>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Commits list</div>
+    <table class="table table-striped table-hover">
+        <tr>
+            <th colspan="2">Author</th>
+            <th colspan="2">Committer</th>
+            <th>Commit message</th>
+        </tr>
+        <tr ng-repeat="commit in commitsData">
+            <td>
+                <a ng-href="#/user/{{commit.author.login}}">
+                    <img ng-src="{{commit.author.avatar_url}}" class="img-rounded" height="42px" alt="">
+                </a>
+            </td>
+            <td>
+                <a ng-href="#/user/{{commit.author.login}}">
+                    {{commit.author.login}}
+                </a>
+            </td>
+            <td>
+                <a ng-href="#/user/{{commit.committer.login}}">
+                    <img ng-src="{{commit.committer.avatar_url}}" class="img-rounded" height="42px" alt="">
+                </a>
+            </td>
+            <td>
+                <a ng-href="#/user/{{commit.committer.login}}">
+                    {{commit.committer.login}}
+                </a>
+            </td>
+            <td>{{commit.commit.message}}</td>
+        </tr>
+    </table>
+</div>
+<!--
+<pre>{{repoData | json}}</pre>-->
+<pre>{{commitsData | json}}</pre>

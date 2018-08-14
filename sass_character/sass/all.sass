@@ -1,0 +1,79 @@
+$gender_ico_padding: 10px
+$gender_ico_radius: 90%
+$gender_ico_font-size: 25px
+$gender_ico_font-size: 25px
+.male .glyphicon
+    padding: $gender_ico_padding
+    border-radius: $gender_ico_radius
+    font-size: $gender_ico_font-size  
+    transition: all 0.6s ease
+    transform-style: preserve-3d
+    color: #3498db
+    background-color: #fff
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.3)
+.female
+    @extend .male
+.female .glyphicon 
+    color: #e74c3c
+.male .glyphicon:hover
+    transform: rotateY(180deg)
+.summary
+    display: none
+.btn
+    background-color: #597da3
+    color: #fff
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.3)
+    -webkit-transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out
+.btn:hover
+    background-color: #70789c
+    color: #fff
+    border: 1px solid #fff
+.alert
+    margin-left: 15px
+    background-color: #e6e6e6
+    border: 1px solid #fff
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.3)
+body
+    color: #70789c
+    background-color: #ddd
+h2
+    text-shadow: 1px 1px 0px #fff
+ol
+    counter-reset: myCounter
+
+li
+    list-style: none
+    font-weight: bold
+    -webkit-transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out
+li:before 
+    counter-increment: myCounter
+    content: counter(myCounter)
+    color: white
+    background: #597da3
+    display: inline-block
+    text-align: center
+    margin: 5px 10px
+    line-height: 40px
+    width: 40px
+    height: 40px
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.3)
+    border: 1px solid #e6e6e6
+    -webkit-transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out
+    border-radius: 100%
+    
+li:hover:before
+    background-color: #70789c
+    border: 1px solid #fff
+    cursor: pointer
+li:hover
+    color: #70789c
+li span:hover
+    text-shadow: 1px 1px 0px #fff
+    cursor: pointer
+.test
+    position: absolute
+    top: 20px
+    left: 100px

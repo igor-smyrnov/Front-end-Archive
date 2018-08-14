@@ -1,0 +1,71 @@
+[
+	{
+		"name": "gargoyle",
+		"animations": {
+			"walkDown": [0, 1, 2],
+			"walkLeft": [3, 4, 5],
+			"walkRight": [6, 7, 8],
+			"walkUp": [9, 10, 11],
+			"idleDown": [0],
+			"idleLeft": [3],
+			"idleRight": [6],
+			"idleUp": [9]
+		}
+	},
+	
+	{
+		"name": "skeleton",
+		"animations": {
+			"walkDown": [0, 1, 2],
+			"walkLeft": [3, 4, 5],
+			"walkRight": [6, 7, 8],
+			"walkUp": [9, 10, 11],
+			"idleDown": [0],
+			"idleLeft": [3],
+			"idleRight": [6],
+			"idleUp": [9]
+		}
+	},
+	
+	{
+		"name": "ghost",
+		"animations": {
+			"walkDown": [0, 1, 2],
+			"walkLeft": [3, 4, 5],
+			"walkRight": [6, 7, 8],
+			"walkUp": [9, 10, 11],
+			"idleDown": [0],
+			"idleLeft": [3],
+			"idleRight": [6],
+			"idleUp": [9]
+		}
+	},
+	
+	{
+		"name": "samurai",
+		"animations": {
+			"walkDown": [0, 1, 2],
+			"walkLeft": [3, 4, 5],
+			"walkRight": [6, 7, 8],
+			"walkUp": [9, 10, 11],
+			"idleDown": [0],
+			"idleLeft": [3],
+			"idleRight": [6],
+			"idleUp": [9]
+		}
+	},
+	
+	{
+		"name": "skeleton",
+		"animations": {
+			"walkDown": [0, 1, 2],
+			"walkLeft": [3, 4, 5],
+			"walkRight": [6, 7, 8],
+			"walkUp": [9, 10, 11],
+			"idleDown": [0],
+			"idleLeft": [3],
+			"idleRight": [6],
+			"idleUp": [9]
+		}
+	}
+]

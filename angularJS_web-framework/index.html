@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Angular_CMS">
+<head>
+  <meta charset="UTF-8">
+  <title>{{MetaTags.title}}</title>
+  <meta name="description" content="{{ MetaTags.description }}" >
+  <meta name="keywords" content="{{ MetaTags.keywords }}" >
+
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="app/style.css">
+</head>
+<body>
+
+<main class="container">
+  <ui-view name="widgetArea1"></ui-view>
+  <div class="content col-md-9">
+    <ui-view name="widgetArea2"></ui-view>
+    <ui-view name="content"></ui-view>
+  </div>
+  <ui-view name="widgetArea3"></ui-view>
+</main>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/ui-router-metatags/dist/ui-router-metatags.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/getDataService.js"></script>
+  <script src="app/content/homeCtrl.js"></script>
+</body>
+</html>

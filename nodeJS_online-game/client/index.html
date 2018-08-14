@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #gameDiv {
+            display: none;
+        }
+        #karinaCanvas {
+            border: 1px dotted;
+        }
+        #chat-text {
+            width: 500px;
+            height: 100px;
+            overflow-y: scroll;
+        }
+        #chat-input {
+            width: 500px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+    <div id="signDiv">
+        <p>Username: <input type="text" id="signDiv-username"></p>
+        <p>Password: <input type="text" id="signDiv-password"></p>
+        <p>
+            <button id="signDiv-signIn">Sign In</button>
+            <button id="signDiv-signUp">Sign Up</button>
+        </p>
+    </div>
+    <div id="gameDiv">
+        <canvas id="karinaCanvas" height="500px" width="500px"></canvas>
+        <div id="chat-text"></div>
+        <form action="" id="chat-form">
+            <input type="text" id="chat-input">
+        </form>
+    </div>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="../client/login.js"></script>
+    <script src="../client/game.js"></script>
+    <script src="../client/chat.js"></script>
+</body>
+</html>

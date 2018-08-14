@@ -1,0 +1,86 @@
+body {
+	background-color: #fff;
+	padding-top: 100px;
+	padding-bottom: 40px;
+}
+.form-signin {
+	max-width: 330px;
+	margin: 0 auto;
+	border: 1px solid #D4D2D2;
+	border-radius: 5px;
+	padding: 30px;
+	background-color: #EEE;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+	margin: 10px 20px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form-signin button{
+	margin-bottom: 10px;
+}
+
+/*--->Blood colors<---*/
+.blood .btn.btn-primary{
+	background-color: #C5262B;
+	border-color: #C5264B;
+}
+.blood .btn.btn-primary:hover, .blood .btn.btn-primary:focus{
+	background-color: #DA3136;
+}
+.blood .navbar-fixed-top{
+	background-color: #000;
+}
+.blood .navbar-fixed-top .navbar-nav li>a{
+	color: #fff;
+}
+.blood .navbar-fixed-top .navbar-nav li>a:hover, .navbar-fixed-top li>a:active{
+	color: #999;
+}
+/*
+.corrupt, .corrupt a{
+    color: #fff;
+}
+.corrupt .form-signin{
+    background-color: #776690;
+}
+.corrupt .btn.btn-primary{
+	background-color: #5a3b40;
+	border-color: #5a3b60;
+}
+.corrupt .btn.btn-primary:hover, .corrupt .btn.btn-primary:focus{
+	background-color: #6f434b;
+}
+.corrupt .navbar-fixed-top{
+	background-color: #665a88;
+}
+.corrupt .navbar-fixed-top .navbar-nav li>a{
+	color: #fff;
+}
+.corrupt .navbar-fixed-top .navbar-nav li>a:hover, .corrupt .navbar-fixed-top li>a:active{
+	color: #acbd9d;
+}*/

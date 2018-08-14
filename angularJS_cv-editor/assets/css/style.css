@@ -1,0 +1,149 @@
+/* Common */
+
+@font-face {
+    font-family: Roboto-slab;
+    src: url(../../assets/fonts/RobotoSlab-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../../assets/fonts/Roboto-Regular.ttf);
+}
+:focus{
+	outline: 0px;
+	
+}
+body {
+    background: #181818;
+    margin: 0;
+    padding: 0;
+}
+h1, h2{
+    font-family: Roboto-slab;
+    margin: 0;
+}
+p, li{
+    font-size: 1.1em;
+    font-family: Roboto;
+	color: #444;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+input{
+	width: 100%;
+	display: inline;
+}
+header, main, footer{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.container{
+    max-width: 800px;
+    padding: 0;
+}
+.wraper{
+    background: #fff;
+    border-top: #4a81a6 solid 9px;
+    border-bottom: #4a81a6 solid 9px;
+}
+.row{
+    margin: 0;
+}
+[class*='col-']{
+    padding-left: 0;
+}
+.panel{
+    position: fixed;
+    left: 10%;
+    z-index: 1030;
+    bottom: 0;
+}
+.btn-remove{
+    font-size: 14px;
+    cursor: pointer;
+    color: inherit;
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+}
+.btn-save{
+    font-size: 14px;
+    cursor: pointer;
+    color: inherit;
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+}
+.editable-click:hover, 
+.editable-click:active, 
+.editable-click:focus{
+	background-color: #8ebfe7;
+}
+/* header */
+
+header{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #a8a8a7;
+}
+header>div>img {
+    height: 100px;
+    border-radius: 30%;
+}
+header>div>h1{
+    font-size: 2.5em;
+    font-weight: 700;
+}
+header>div>h2{
+    font-size: 2em;
+    color: #4a81a6;
+	display: inline;
+}
+header>div>ul>li{
+    font-size: 1em;
+}
+.years{
+    color: #4a81a6;
+    margin-bottom: 3px;
+}
+/* main */
+main>section>div>h1{
+    font-size: 1.4em;
+    color: #4a81a6;
+    margin-bottom: 20px;
+}
+main>section{
+    border-bottom: 1px solid #dedede;
+    padding-top: 20px;
+}
+section:last-child{
+    border-bottom: 0px;
+    border-top: 0;
+}
+main>section>div>article{
+    padding-bottom: 20px;
+    position: relative;
+}
+main>section>div>article>h2{
+    font-size: 1.2em;
+}
+.skill{
+    background-color: #4a81a6;
+    border-radius: 4px;
+    padding: .4em 1em;
+    color: white;
+    margin: 0.1em;
+}
+
+/* footer */
+footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #dedede;
+}
+footer>p{
+    font-size: 0.9em;
+    color: #a8a8a7;
+}

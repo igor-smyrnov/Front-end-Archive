@@ -1,0 +1,17 @@
+.user-orgs a{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.jumbotron {
+    color: #777;
+}
+.jumbotron img,
+.jumbotron h1 {
+    float: left;
+}
+.jumbotron h1 {
+    padding-left: 15px;
+}
+a.list-group-item {
+    color: #23527c;
+}

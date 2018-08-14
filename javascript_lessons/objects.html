@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+</head>
+<body>
+   
+    <script>
+        var user, user2, myStr, myNum;
+        user = {
+            firstName: "Igor",
+            lastName: "Smyrnov",
+            age: 27,
+            sex: "male",
+            fullName: function(){
+                return this.firstName + ' ' + this.lastName;
+            }
+        };
+        user2 = new Object({
+            firstName: "Vlad",
+            lastName: "Gritsenko",
+            age: 27,
+            sex: "male",
+            fullName: function(){
+                return this.firstName + ' ' + this.lastName;
+            }
+        });
+        
+        myStr = new String('Test');
+        myNum = new Number(12);
+        
+        console.log(user.fullName());
+        console.log(user2.fullName());
+        console.log(myStr);
+        console.log(myNum);
+    </script>
+    
+</body>
+</html>

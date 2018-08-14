@@ -1,0 +1,30 @@
+<main class="container">
+    <div class="panel panel-primary"
+         ng-class="{'panel-danger': travisBuild.result, 'panel-success': !travisBuild.result}">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span ng-if="!travisBuild.result"
+                      class="text-success">
+                    <span class="glyphicon glyphicon-ok"
+                        aria-hidden="true">
+                    </span>
+                    <b>Succsess</b>
+                    #{{travisBuild.number}}
+                </span>
+                <span ng-if="travisBuild.result"
+                      class=" text-danger">
+                    <span class="glyphicon glyphicon-remove"
+                        aria-hidden="true">
+                    </span>
+                    <b>Failed</b>
+                    #{{travisBuild.number}}
+                </span>
+            </h3>
+        </div>
+        <div class="panel-body">
+            <p><b>Commit number: </b>{{travisBuild.commit}}</p>
+            <p><b>Commit message: </b>{{travisBuild.message}}</p>
+            <p><b>Committer name: </b>{{travisBuild.committer_name}}</p>
+        </div>
+    </div>
+</main>

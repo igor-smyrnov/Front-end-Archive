@@ -1,0 +1,27 @@
+{
+  "name": "cv-editor",
+  "description": "Simple AngularJS project",
+  "main": "index.js",
+  "authors": [
+    "igor-smyrnov"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/igor-smyrnov/cv-editor",
+  "moduleType": [
+    "es6"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "~3.3.6",
+    "angular": "~1.5.4",
+    "jquery": "~2.2.3",
+    "angular-ui-router": "~0.2.18"
+  }
+}

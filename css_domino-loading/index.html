@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Domino loading</title>
+    <link rel="stylesheet" href="box-1.css">
+    <link rel="stylesheet" href="box-2.css">
+    <link rel="stylesheet" href="box-3-4.css">
+    <link rel="stylesheet" href="box-5.css">
+    <link rel="stylesheet" href="box-6-7.css">
+    <link rel="stylesheet" href="box-8-9.css">
+    <style>
+        main{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        [class*="box-"]{
+            width: 30%;
+            height: 100px;
+            border: 1px solid #000;
+            margin: 10px;
+            float: left;
+            background-color: #222222;
+            position: relative;
+            overflow: hidden;
+        }
+        .title{
+            color: #fff;
+            font-family:sans-serif;
+            font-size: 12px;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+        .canvas{
+            top: 20%;
+            left: 35%;
+            
+            height: 60%;
+            width: 40%;
+            position: absolute;
+        }
+        [class*="bone-"]{
+            float: left;
+            height: 80%;
+            width: 5px;
+            background-color: #b4f2f4;
+            margin-right: 7px;
+            border-radius: 50px;
+        }
+        [class*="ball-"]{
+            height: 5px;
+            width: 5px;
+            background-color: #fff;
+            border-radius: 100%;
+            float: left;
+            margin-right: 7px;
+        }
+        [class*="square-"]{
+            height: 10px;
+            width: 10px;
+            float: left;
+
+            background-color: #2294f0;
+            border-radius: 0 0 10% 10%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+      <div class="box-1">
+       <span class="title">box-1</span>
+        <div class="canvas">
+            <div class="bone-1"></div>
+            <div class="bone-2"></div>
+            <div class="bone-3"></div>
+            <div class="bone-4"></div>
+            <div class="bone-5"></div>
+            <div class="bone-6"></div>
+            <div class="bone-7"></div>
+        </div>
+       </div>
+        <div class="box-2">
+           <span class="title">box-2</span>
+            <div class="canvas">
+                <div class="bone-1"></div>
+                <div class="bone-2"></div>
+                <div class="bone-3"></div>
+                <div class="bone-4"></div>
+                <div class="bone-5"></div>
+                <div class="bone-6"></div>
+                <div class="bone-7"></div>
+            </div>
+        </div>
+        <div class="box-3">
+           <span class="title">box-3</span>
+            <div class="canvas">
+                <div class="bone-1"></div>
+                <div class="bone-2"></div>
+                <div class="bone-3"></div>
+                <div class="bone-4"></div>
+                <div class="bone-5"></div>
+                <div class="bone-6"></div>
+                <div class="bone-7"></div>
+            </div>
+        </div>
+        <div class="box-4">
+           <span class="title">box-4</span>
+            <div class="canvas">
+                <div class="bone-1"></div>
+                <div class="bone-2"></div>
+                <div class="bone-3"></div>
+                <div class="bone-4"></div>
+                <div class="bone-5"></div>
+                <div class="bone-6"></div>
+                <div class="bone-7"></div>
+            </div>
+        </div>
+        <div class="box-5">
+           <span class="title">box-5</span>
+            <div class="canvas">
+                <div class="bone-1"></div>
+                <div class="bone-2"></div>
+                <div class="bone-3"></div>
+                <div class="bone-4"></div>
+                <div class="bone-5"></div>
+                <div class="bone-6"></div>
+                <div class="bone-7"></div>
+            </div>
+        </div>
+        <div class="box-6">
+           <span class="title">box-6</span>
+            <div class="canvas">
+                <div class="ball-1"></div>
+                <div class="ball-2"></div>
+                <div class="ball-3"></div>
+                <div class="ball-4"></div>
+                <div class="ball-5"></div>
+                <div class="ball-6"></div>
+                <div class="ball-7"></div>
+            </div>
+        </div>
+        <div class="box-7">
+           <span class="title">box-7</span>
+            <div class="canvas">
+                <div class="ball-1"></div>
+                <div class="ball-2"></div>
+                <div class="ball-3"></div>
+                <div class="ball-4"></div>
+                <div class="ball-5"></div>
+                <div class="ball-6"></div>
+                <div class="ball-7"></div>
+            </div>
+        </div>        
+        <div class="box-8">
+           <span class="title">box-8</span>
+            <div class="canvas">
+                <div class="ball-1"></div>
+                <div class="ball-2"></div>
+                <div class="ball-3"></div>
+                <div class="ball-4"></div>
+                <div class="ball-5"></div>
+                <div class="ball-6"></div>
+                <div class="ball-7"></div>
+            </div>
+        </div>        
+        <div class="box-9">
+           <span class="title">box-9</span>
+            <div class="canvas">
+                    <div class="square-1"></div>
+                    <div class="square-2"></div>
+                    <div class="square-3"></div>
+                </div>
+            </div>
+    </main>
+</body>
+</html>

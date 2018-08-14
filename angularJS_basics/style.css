@@ -1,0 +1,56 @@
+        ul{margin: 0; padding: 0; list-style: none}
+        
+        li{padding: 30px; display: block;float: left;}
+        
+        input{margin: 10px 0;}
+        
+        .ico{display: block;}
+        
+        .beforeWW{background: teal;color: beige; text-align: center}
+        .beforeWW .carIcon{fill:skyblue}
+        .beforeWW circle{fill:beige}
+        
+        li, .afterWW{color: teal;background: beige; text-align: center}
+        li, .afterWW .carIcon{fill:#7077B6}
+        li, .afterWW circle{fill:teal}
+        
+        .hidden{display: none}
+        
+        .clearfix{clear: both}
+        
+        li.ng-enter{
+            transition: 0.5s ease all;
+            opacity: 0;
+            transform: translateY(20px);
+        }        
+        li.ng-enter.ng-enter-active{
+            opacity: 1;
+            transform: translateY(0);
+        }        
+        li.ng-leave{
+            transition: 0.5s ease all;
+            opacity: 1;
+            transform: translateY(0);
+        }        
+        li.ng-leave.ng-leave-active{
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        ul.ng-enter{
+            transition: 0.5s ease all;
+            opacity: 0;
+            transform: translateX(-100%);
+        }        
+        ul.ng-enter.ng-enter-active{
+            opacity: 1;
+            transform: translateX(0);
+        }        
+        ul.ng-leave{
+            transition: 0.5s ease all;
+            opacity: 1;
+            transform: translateX(0);
+        }        
+        ul.ng-leave.ng-leave-active{
+            transform: translateX(-100%);
+            opacity: 0;
+        }

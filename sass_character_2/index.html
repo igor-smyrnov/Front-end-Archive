@@ -1,0 +1,77 @@
+<!-- 
+1-st Step: start Angular "Hello World" +
+2-nd Step: include Sass styles +
+3-nd Step: make some functions in controller
+Last step: Using GRUNT for project
+-->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Character</title>
+    <script src="vendor/js/angular.min.js"></script>
+    <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+    <script src="vendor/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-app="charCreator">
+    <div class="main" ng-controller="MainController">
+        <div class="navbar navbar-default">
+            <div class="container"> 
+                <h2>{{title}}</h2>
+            </div>
+        </div>
+            
+        <div class="container">
+            <div class="row-fluid">
+            <div class="name form-group col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Generate</button>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Name">
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+            <div class="surname form-group col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Generate</button>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Surname">
+                </div>
+            </div>
+            </div>
+        
+            <div class="row-fluid">
+            <div class="form-group col-lg-3">
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="male btn btn-default">
+                        <span class="glyphicon glyphicon-king" aria-hidden="true"></span> Male
+                    </button>
+                    <button type="button" class="female btn btn-default"> 
+                        <span class="glyphicon glyphicon-queen" aria-hidden="true"></span> Female          
+                    </button>
+                </div>
+            </div>
+            </div>
+            <div class="row-fluid">
+                <div class="form-group col-lg-3">
+                    <button type="button" class="submit btn btn-default">Submit</button>
+                </div>
+                <ol class="summary alert alert-info col-lg-3">
+                    <li class="s-name">Name: <span>{{name}}</span></li>
+                    <li class="s-surname">Surname: <span>{{surname}}</span></li>
+                    <li class="s-gender">Gender: <span>{{gender}}</span></li>
+                </ol>
+            </div> 
+        </div>
+    </div>
+    
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+</body>
+</html>

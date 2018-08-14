@@ -1,0 +1,79 @@
+$primary_color: #597da3;
+$secondary_color: #70789c;
+$primary_lighter: lighten($primary_color, 40%);
+$secondary_lighter: lighten($secondary_color, 50%);
+
+$red: random(256)-1;
+$green: random(256)-1;
+$blue: random(256)-1;
+
+$ol_size: 30px;
+
+body{
+    color: $primary_color;
+    background-color: $secondary_lighter;
+}
+h2{
+    color: rgb($red, $green, $blue);
+    text-shadow: 1px 1px 0px $secondary_lighter;
+}
+ol{
+    counter-reset: myCounter;
+}
+
+li{
+    list-style: none;
+    font-weight: bold;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+li:before{
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    color: $primary_lighter;
+    background: $primary_color;
+    display: inline-block;
+    text-align: center;
+    margin: 5px 10px;
+    line-height: $ol_size;
+    width: $ol_size;
+    height: $ol_size;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.3);
+    border: 1px solid #e6e6e6;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-radius: 100%;
+    font-size: $ol_size/2;
+}
+li:hover:before{
+    background-color: $secondary_color;
+    border: 1px solid $secondary_lighter;
+    cursor: pointer;
+}
+li:hover{
+    color: $secondary_color;
+}
+li span:hover{
+    text-shadow: 1px 1px 0px $secondary_lighter;
+    cursor: pointer;
+}
+.btn{
+    background-color: $primary_color;
+    color: $primary_lighter;
+    border: 1px solid $primary_lighter;
+    box-shadow: 0px 1px 4px 0px $primary_lighter;
+    
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.btn:hover{
+    background-color: $secondary_color;
+    color: $secondary_lighter;
+    border: 1px solid $secondary_lighter;
+}
+.alert{
+    margin-left: 15px;
+    background-color: $primary_lighter;
+    border: 1px solid $secondary_lighter;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.3);
+}

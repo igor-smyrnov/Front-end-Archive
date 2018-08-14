@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Domino loading</title>
+    <style>
+        main.box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            padding: 50px;
+            overflow: hidden;
+        }
+        [class*="bone-"]{
+            float: left;
+            height: 20px;
+            width: 5px;
+            background-color: #ccc;
+            margin-right: 7px;
+            margin-top: 30px;
+            
+            /*-webkit-animation: cssAnimation 3.9499s 2 ease;
+            -moz-animation: cssAnimation 3.9499s 2 ease;
+            -o-animation: cssAnimation 3.9499s 2 ease;
+            
+            -webkit-animation: bone 1s linear;
+            -moz-animation: bone 2s linear infinite;
+            -o-animation: bone 2s linear infinite;*/
+        }
+        .bone-1{
+            -webkit-animation: bone .5s linear;
+        }
+        .bone-2{
+            -webkit-animation: bone 1s linear;
+        }
+        .bone-3{
+            -webkit-animation: bone 1.5s linear;
+        }
+        .bone-4{
+            -webkit-animation: bone 2s linear;
+        }
+        .bone-5{
+            -webkit-animation: bone 2.5s linear;
+        }
+        .bone-6{
+            -webkit-animation: bone 3s linear;
+        }
+        .bone-7{
+            -webkit-animation: bone 3.5s linear;
+        }
+        @-webkit-keyframes bone{
+            0%{
+            -webkit-transform: 
+                    rotate(0deg) scale(1) skew(1deg) translate(0px); 
+            }
+            100%{
+            -webkit-transform: 
+                    rotate(180deg) scale(1) skew(1deg) translate(0px); 
+            }
+        }
+        /*
+        @-webkit-keyframes bone {
+            from { 
+                -webkit-transform: 
+                    rotate(0deg) scale(1) skew(1deg) translate(0px); 
+            }
+            to { 
+                -webkit-transform: 
+                    rotate(90deg) scale(1) skew(1deg) translate(0px); 
+            }
+            20%{
+                opacity: 0.5;
+            }
+            30%{
+                opacity: 0.8;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes bone-1 {
+            from { 
+                -webkit-transform: 
+                    rotate(0deg) scale(1) skew(1deg) translate(0px); 
+            }
+            to { 
+                -webkit-transform: 
+                    rotate(90deg) scale(1) skew(1deg) translate(0px); 
+            }
+            20%{
+                opacity: 0.5;
+            }
+            30%{
+                opacity: 0.8;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        
+        @-moz-keyframes bone {
+            from { 
+                -moz-transform: 
+                    rotate(0deg) scale(1) skew(1deg) translate(0px); 
+            }
+        to { 
+            -moz-transform: 
+                rotate(210deg) scale(1) skew(1deg) translate(0px); 
+            }
+        }
+        @-o-keyframes bone {
+            from { 
+                -o-transform: 
+                    rotate(0deg) scale(1) skew(1deg) translate(0px); 
+                }
+        to { 
+            -o-transform: 
+                rotate(210deg) scale(1) skew(1deg) translate(0px); 
+            }
+        }*/
+    </style>
+</head>
+<body>
+    <main class="box">
+       <div class="bone-1"></div>
+       <div class="bone-2"></div>
+       <div class="bone-3"></div>
+       <div class="bone-4"></div>
+       <div class="bone-5"></div>
+       <div class="bone-6"></div>
+       <div class="bone-7"></div>
+    </main>
+</body>
+</html>

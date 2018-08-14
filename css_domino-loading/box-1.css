@@ -1,0 +1,92 @@
+.box-1 [class*="bone-"]{
+    background-color: #FCC728;
+    box-shadow: 0px 0px 5px 3px #629DF0;
+}
+.box-1 .bone-1{
+    -webkit-animation: bones-1-shadow 1s linear infinite;
+}.box-1 .bone-2{
+    -webkit-animation: bones-1-shadow 1.1s linear infinite;
+}.box-1 .bone-3{
+    -webkit-animation: bones-1-shadow 1.2s linear infinite;
+}.box-1 .bone-4{
+    -webkit-animation: bones-1-shadow 1.3s linear infinite;
+}.box-1 .bone-5{
+    -webkit-animation: bones-1-shadow 1.4s linear infinite;
+}.box-1 .bone-6{
+    -webkit-animation: bones-1-shadow 1.5s linear infinite;
+}.box-1 .bone-7{
+    -webkit-animation: bones-1-shadow 1.6s linear infinite;
+}
+@-webkit-keyframes bones-1-shadow{    
+    20%{box-shadow: 0px 3px 3px #629DF0;}
+    40%{box-shadow: 0px 3px 7px #629DF0;}
+    60%{box-shadow: 0px 3px 3px #629DF0;}
+    80%{box-shadow: 0px 3px 7px #629DF0;}
+}
+.box-1:hover.box-1 .bone-1{
+    -webkit-animation: bones-1 1s linear;
+    -moz-animation: bones-1 1s linear;
+    -webkit-animation: bones-1 1s linear;
+    animation: bones-1 1s linear;
+}
+.box-1:hover.box-1 .bone-2{
+    -webkit-animation: bones-1 1.1s linear;
+    -moz-animation: bones-1 1.1s linear;
+    -o-animation: bones-1 1.1s linear;
+    animation: bones-1 1.1s linear;
+}
+.box-1:hover.box-1 .bone-3{
+    -webkit-animation: bones-1 1.2s linear;
+    -moz-animation: bones-1 1.2s linear;
+    -o-animation: bones-1 1.2s linear;
+    animation: bones-1 1.2s linear;
+}
+.box-1:hover.box-1 .bone-4{
+    -webkit-animation: bones-1 1.3s linear;
+    -moz-animation: bones-1 1.3s linear;
+    -o-animation: bones-1 1.3s linear;
+    animation: bones-1 1.3s linear;
+}
+.box-1:hover.box-1 .bone-5{
+    -webkit-animation: bones-1 1.4s linear;
+    -moz-animation: bones-1 1.4s linear;
+    -o-animation: bones-1 1.4s linear;
+    animation: bones-1 1.4s linear;
+}
+.box-1:hover.box-1 .bone-6{
+    -webkit-animation: bones-1 1.5s linear;
+    -moz-animation: bones-1 1.5s linear;
+    -o-animation: bones-1 1.5s linear;
+    animation: bones-1 1.5s linear;
+}
+.box-1:hover.box-1 .bone-7{
+    -webkit-animation: bones-1 1.6s linear;
+    -moz-animation: bones-1 1.6s linear;
+    -o-animation: bones-1 1.6s linear;
+    animation: bones-1 1.6s linear;
+}
+@-webkit-keyframes bones-1 {
+    20%{background-color:#9DD0D4;}
+    40%{background-color:#629DF0;}
+    60%{background-color:#671A51;}
+    80%{background-color:#050505;}
+    100%{background-color:#FCC728;}
+    
+    0%{box-shadow: none;}
+    100%{box-shadow: none;}
+    
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(180deg);}
+}
+@-moz-keyframes bones-1 {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(180deg);}
+}
+@-o-keyframes bones-1 {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(180deg);}
+}
+@keyframes bones-1 {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(180deg);}
+}

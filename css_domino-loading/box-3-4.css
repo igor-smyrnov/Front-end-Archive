@@ -1,0 +1,78 @@
+.box-3 [class*="bone-"]{
+    background-color: #bd1aba;
+}
+
+.box-3:hover.box-3 .bone-1{
+    -webkit-animation: bone-3 1s linear;
+}
+.box-3:hover.box-3 .bone-2{
+    -webkit-animation: bone-3 1.3s linear;
+}
+.box-3:hover.box-3 .bone-3{
+    -webkit-animation: bone-3 1.6s linear;
+}
+.box-3:hover.box-3 .bone-4{
+    -webkit-animation: bone-3 1.9s linear;
+}
+.box-3:hover.box-3 .bone-5{
+    -webkit-animation: bone-3 2.2s linear;
+}
+.box-3:hover.box-3 .bone-6{
+    -webkit-animation: bone-3 2.5s linear;
+}
+.box-3:hover.box-3 .bone-7{
+    -webkit-animation: bone-3 2.8s linear;
+}
+@-webkit-keyframes bone-3{
+    0%{transform:rotate(0deg);}
+    15%{background-color:#2294f0;}
+    30%{background-color:#1ccec5;}
+    45%{background-color:#6cfd4e;}
+    60%{background-color:#ef9621;}
+    75%{background-color:#fe5944;}
+    100%{
+        transform:rotate(180deg);
+        background-color:#bd1aba;
+    }
+}
+
+.box-4 [class*="bone-"]{
+    background-color: #1CDBDC;
+}
+
+.box-4:hover.box-4 .bone-1{
+    -webkit-animation: bones-4 1.5s linear;
+}
+.box-4:hover.box-4 .bone-2{
+    -webkit-animation: bones-4 1.6s linear;
+}
+.box-4:hover.box-4 .bone-3{
+    -webkit-animation: bones-4 1.7s linear;
+}
+.box-4:hover.box-4 .bone-4{
+    -webkit-animation: bones-4 1.8s linear;
+}
+.box-4:hover.box-4 .bone-5{
+    -webkit-animation: bones-4 1.9s linear;
+}
+.box-4:hover.box-4 .bone-6{
+    -webkit-animation: bones-4 2s linear;
+}
+.box-4:hover.box-4 .bone-7{
+    -webkit-animation: bones-4 2.1s linear;
+}
+@-webkit-keyframes bones-4 {
+    
+    20%{background-color:#74E8D1;}
+    40%{background-color:#A5FFBD;}
+    60%{background-color:#E7FDA5;}
+    80%{background-color:#F6E5F1;}
+    
+    0% {transform:rotate(0deg);}
+    20% {transform:rotate(90deg);}
+    40% {transform:rotate(0deg);}
+    80% {transform:rotate(-90deg);}
+    100% {transform:rotate(0deg);
+        background-color: #1CDBDC;}
+    
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="GitHub_interface">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Home</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li ui-sref-active="active">
+                    <a ui-sref="repos">Repositories</a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="users">Users</a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="orgs">Organizations</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main class="container">
+    <ui-view></ui-view>
+</main>
+
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./bower_components/angular/angular.js"></script>
+<script src="./bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="./app/app.js"></script>
+<script src="./app/getDataFactory.js"></script>
+<script src="app/reposList/reposListCtrl.js"></script>
+<script src="app/usersList/usersListCtrl.js"></script>
+<script src="app/orgsList/orgsListCtrl.js"></script>
+<script src="app/reposList/reposInOrgCtrl.js"></script>
+<script src="app/reposList/reposInUserCtrl.js"></script>
+<script src="app/usersList/usersInOrgCtrl.js"></script>
+<script src="app/singleRepo/singleRepoCtrl.js"></script>
+<script src="app/singleUser/singleUserCtrl.js"></script>
+<script src="app/singleOrg/singleOrgCtrl.js"></script>
+
+</body>
+</html>

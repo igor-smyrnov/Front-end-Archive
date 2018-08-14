@@ -1,0 +1,23 @@
+{
+  "name": "github_interface",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igor-smyrnov/GitHub_Interface.git"
+  },
+  "author": "Igor Smyrnov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igor-smyrnov/GitHub_Interface/issues"
+  },
+  "homepage": "https://github.com/igor-smyrnov/GitHub_Interface#readme"
+}
