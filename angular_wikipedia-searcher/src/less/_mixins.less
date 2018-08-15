@@ -1,0 +1,16 @@
+@import "_variables";
+
+.drop-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @r, @g, @b, @alpha: 0.25) {
+  -webkit-box-shadow:	@x @y @blur @spread rgba(@r, @g, @b, @alpha);
+  -moz-box-shadow:	@x @y @blur @spread rgba(@r, @g, @b, @alpha);
+  box-shadow:		@x @y @blur @spread rgba(@r, @g, @b, @alpha);
+}
+
+.custom-font(@alias: arial, @family-name: arial, @weight: normal, @style: normal){
+  @font-face{
+    font-family: @alias;
+    src: url('../assets/fonts/@{family-name}.ttf') format('truetype');
+    font-weight: @weight;
+    font-style: @style;
+  }
+}

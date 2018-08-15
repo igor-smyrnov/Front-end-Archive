@@ -1,0 +1,77 @@
+<header>
+    <div class="text-center">
+        <h1>
+            <a href="http://localhost:4200/search"
+               title="To main page">Wikipedia searcher</a>
+        </h1>
+
+        <form [formGroup]="searchForm"
+              (ngSubmit)="search(searchInput.value)">
+
+            <input type="text"
+                   formControlName="searchInput"
+                   name="searchInput"
+                   autocomplete="off">
+
+            <button class="btn-primary"
+                    type="submit"
+                    title="Search">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</header>
+<main class="container">
+    <div *ngIf="query && searchResults">
+        <ul>
+            <li class="result"
+                *ngFor="let result of searchResults">
+
+                <a class="result-header"
+                   [href]="result.link"
+                   target="_blank"
+                   title="{{result.link}}">
+
+                    <h3>{{ result.title }}</h3>
+                </a>
+                <hr>
+                <ul *ngIf="result.terms">
+                    <li class="result-description"
+                        *ngFor="let description of result.terms.description">
+
+                        {{ description }}
+                    </li>
+                </ul>
+                <div class="result-content">
+
+                    <a [href]="result.link"
+                       target="_blank"
+                       title="{{result.link}}">
+
+                        <img *ngIf="result.thumbnail"
+                             [src]="result.thumbnail.source"
+                             alt="{{result.title}}">
+                    </a>
+                    <p>{{ result.extract }}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div *ngIf="NoResults">
+        <h2>Nothing found!</h2>
+        <p>{{ NoResults }}</p>
+    </div>
+
+    <div *ngIf="!searchResults && !NoResults">
+        <h2>Wellcome!</h2>
+        <p>Here will be search results</p>
+    </div>
+</main>
+
+<footer *ngIf="query && searchResults">
+    <div class="container">
+        by <a href="https://github.com/igor-smyrnov"
+              target="_blank">Igor Smyrnov</a>
+    </div>
+</footer>
